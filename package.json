@@ -11,7 +11,11 @@
       "**/react",
       "**/react-dom",
       "**/react-native",
-      "**/react-native/**"
+      "**/react-native/**",
+      "**/react-native-reanimated",
+      "**/react-native-reanimated/**",
+      "**/react-native-gesture-handler",
+      "**/react-native-gesture-handler/**"
     ]
   },
   "scripts": {
