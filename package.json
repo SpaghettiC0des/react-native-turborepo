@@ -22,7 +22,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css)\"",
     "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
     "postinstall": "husky install"
   },
@@ -39,5 +39,10 @@
     "node": ">=14.0.0"
   },
   "dependencies": {},
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "lint-staged": {
+    "**/*.+(js|jsx|ts|tsx|json|css)": [
+      "yarn format"
+    ]
+  }
 }

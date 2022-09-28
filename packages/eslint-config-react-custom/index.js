@@ -1,13 +1,9 @@
-
 module.exports = {
-  extends: [
-    "plugin:import/recommended",
-    "plugin:import/typescript"
-  ],
-  "settings": {
+  extends: ["plugin:import/recommended", "plugin:import/typescript"],
+  settings: {
     "import/resolver": {
-      "typescript": {}
-    }
+      typescript: {},
+    },
   },
   rules: {
     "react/jsx-uses-react": "off",
@@ -15,41 +11,35 @@ module.exports = {
     "react/jsx-sort-props": [
       "error",
       {
-        "ignoreCase": true,
-        "reservedFirst": true,
-        "shorthandFirst": true,
-        "callbacksLast": true
-      }
+        ignoreCase: true,
+        reservedFirst: true,
+        shorthandFirst: true,
+        callbacksLast: true,
+      },
     ],
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal"
-        ],
-        "pathGroups": [
+        groups: ["builtin", "external", "internal"],
+        pathGroups: [
           {
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
-          }
+            pattern: "react",
+            group: "external",
+            position: "before",
+          },
         ],
-        "pathGroupsExcludedImportTypes": [
-          "react"
-        ],
+        pathGroupsExcludedImportTypes: ["react"],
         "newlines-between": "always",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true,
+        },
+      },
     ],
     "import/namespace": "off",
     "import/prefer-default-export": "off",
     "import/export": "error",
     "import/no-cycle": "error",
     "import/no-anonymous-default-export": "error",
-  }
+  },
 };
